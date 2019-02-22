@@ -1,0 +1,2 @@
+# gmote
+Generic LoRaWAN Node
