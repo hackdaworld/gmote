@@ -66,6 +66,7 @@ Details can be found in the respective [firmware](firmware) location.
 
 Next to the very basic digital input sensing and ADC meassurements on the availabe IO and ADC pins, there are a couple of other sensors which require a slightly more special treatment.
 At the moment, these are the ultrasound distance and the capacitive soil moisture sensor.
+
 ![Soil moisture and ultrasound distance sensor](https://www.digidev.de/gmote/img/sensors.jpg)
 
 ## Utils and configuration
@@ -77,7 +78,10 @@ you can find the source code as well as installation and usage instructions in t
 
 To cover GMote and its sensors, a case was designed using [OpenSCAD](http://www.openscad.org/).
 At the moment, the ultrasound distance and capacative moisture sensors are considered.
-Feel free to continue or modify the design to fit more and other types if sensors.
+
+![GMote Cases and sensors for illustration](https://www.digidev.de/gmote/img/mini_900_showcase.png)
+
+Feel free to continue or modify the design to fit more and other types of sensors.
 
 ## Backend 
 
