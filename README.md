@@ -83,7 +83,8 @@ At the moment, the ultrasound distance and capacative moisture sensors are consi
 
 ![GMote Cases and sensors for illustration](https://www.digidev.de/gmote/img/mini_900_showcase.png)
 
-Feel free to continue or modify the design to fit more and other types of sensors.
+The image illustrates the idea of the case and sensors.
+Details and files can be found in the [cases](cases) directory.
 
 ## Backend 
 
