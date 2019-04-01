@@ -20,4 +20,7 @@
 | Y2         | 1         | 32.768kHz    | 535-10248-1-ND                 |
 | J2         | 1         | 6 Pin Conn   | 609-3263-ND                    |
 
+## Schematics
+
+![Schematic of GMote Mini](https://digidev.de/gmote/img/gmote_mini_schematics.jpg)
 

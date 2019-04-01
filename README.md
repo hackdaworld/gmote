@@ -41,6 +41,8 @@ Whatever it is, let us know!
 
 ## Hardware
 
+### PCB
+
 ![Small and mini version of the GMote LoRaWAN node](https://www.digidev.de/gmote/img/pcb_small_min_web03.jpg)
 
 There are currently two versions (small and mini) of the GMote LoRaWAN node.
@@ -52,6 +54,16 @@ A lot of PCB manufacturers directly support the KiCad PCB files.
 
 The size of the SMD parts was chosen to be 0805 (2012) and hand soldering pads were used for the resistors and capacitors so you can DIY at home with a low cost soldering iron.
 Caution: Patience required!
+
+### Battery
+
+The popular JST connector is used to connect the battery.
+It is directly wired to VCC of the used ICs, no voltage regulator no polarity protection diodes!
+Thus, be extremely careful when connecting your power supply.
+
+GMote runs nicely with 3.7V LiPo batteries.
+Higher voltages were not tested, so don't use higher voltages!
+If you don't use the moisture or ultrasound distance sensor (these seem to require more than 3.3V), you can even run it with two AA(A) batteries (3V) or even accus (~2.8V).
 
 ## Firmware
 
