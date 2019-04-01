@@ -4,6 +4,8 @@
 GMote stands for Generic Mote.
 It is meant to be a flexible (i.e. applicable in different scenarios for different purposes utilizing different sensors) IoT Node using the LoRa wireless data communication technology. 
 
+![The first GMote test version](https://www.digidev.de/gmote/img/pcb_ics_web02.jpg)
+
 The first test version was based on the Arduino Pro Mini, which requires very low power if you remove the LED and bypass the power regulator.
 Once this proved to be a good idea, a slim version of the Mini Pro board (i.e. the ATMega 328P) has been integrated and routed on the GMote circuit board.
 At first, the Dragino LoRa Bee was the transceiving unit since we had good results with respect to range and usability.
@@ -39,7 +41,7 @@ Whatever it is, let us know!
 
 ## Hardware
 
-![Small and mini versions of the GMote LoRaWAN nodes](https://www.digidev.de/gmote/img/pcb_ics_web02.jpg)
+![Small and mini version of the GMote LoRaWAN node](https://www.digidev.de/gmote/img/pcb_small_min_web03.jpg)
 
 There are currently two versions (small and mini) of the GMote LoRaWAN node.
 You can find the available PCBs in the respective [PCB](pcb) directory
