@@ -7,7 +7,7 @@ It is meant to be a flexible (i.e. applicable in different scenarios for differe
 ![The first GMote test version](https://www.digidev.de/gmote/img/pcb_ics_web02.jpg)
 
 The first test version was based on the Arduino Pro Mini, which requires very low power if you remove the LED and bypass the power regulator.
-Once this proved to be a good idea, a slim version of the Mini Pro board (i.e. the ATMega 328P) has been integrated and routed on the GMote circuit board.
+Once this proved to be a good idea, a slim version of the Mini Pro board (i.e. the ATMega 328PB) has been integrated and routed on the GMote circuit board.
 At first, the Dragino LoRa Bee was the transceiving unit since we had good results with respect to range and usability.
 In later versions, the relevant HopeRF modem (RFM95) chip was likewise integrated on the board due to availability and price. 
 
@@ -45,7 +45,9 @@ Whatever it is, let us know!
 
 ![Small and mini version of the GMote LoRaWAN node](https://www.digidev.de/gmote/img/pcb_small_min_web03.jpg)
 
-There are currently two versions (small and mini) of the GMote LoRaWAN node.
+There are currently two versions ([small](pcb/small) and [mini](pcb/mini)) of the GMote LoRaWAN node, which are based on the ATMega 328PB and run quite reliably.
+Moreover, there is one based on the [ARM MCU](pcb/arm), which is in very early stage and comes without any guarantee to work. We mean it!
+
 You can find the available PCBs in the respective [PCB](pcb) directory
 together with further details as well as the bill of materials and respective [DigiKey](https://www.digikey.de/) part numbers.
 
@@ -69,7 +71,7 @@ If you don't use the moisture or ultrasound distance sensor (these seem to requi
 
 All files can be found in the [firmware](firmware) location. 
 
-### AVR Mega328PB fimrware
+### AVR ATMega 328PB fimrware
 
 So far, you need the [Arduino IDE](https://www.arduino.cc/en/Main/Software) to build the firmware.
 Moreover, the [LMIC library](https://github.com/matthijskooijman/arduino-lmic) is currently used to implement LoRaWAN.
