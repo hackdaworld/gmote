@@ -12,11 +12,11 @@ At first, the Dragino LoRa Bee was the transceiving unit since we had good resul
 In later versions, the relevant HopeRF modem (RFM95) chip was likewise integrated on the board due to availability and price. 
 
 There are two PCB versions, a small and a mini version, which provide different amount of pin headers to connect various sensors or even actuators. 
-Development of an ARM Cortex M0 based version will start soon.
+Development of an ARM Cortex M0 based version is in progress.
 
-The node is configurable via UART and LoRaWAN download frames.
-It started within the Arduino framework and tries to stay compatible to not loose the huge developer community.
-However, to experience and share the beauty and simplicity of AVR programming and to gain flexibility, a pure AVR GCC port is planned as soon as possible.
+The node is configurable via UART and (planned) LoRaWAN download frames.
+
+It started within the Arduino framework and, as far as the AVR version is concerned, will stick to it to not loose the huge developer community.
 
 ## Most important
 
@@ -24,7 +24,7 @@ GMote is meant to become an all-purpose LoRaWAN node (and in fact a whole eco sy
 Moreover, the design, hardware, firmware and software of the GMote project is open source and free to use without any restriction.
 To enable everyone to participate, everything is kept as simple as possible, ranging from the low-level PCB design and firmware up to the high-level IoT platform app.
 
-Since it aims to become a project for a hopefully huge community, let the GMote developers know what you think about it, about problems that occured, additional features that you require and everything you would like to have different in the current realization. 
+Since it aims to become a project for a hopefully huge community, let the GMote developers know what you think about it, about problems that occured, additional features that you require and everything you would like to have changed in the current realization. 
 Anything on your mind?
 Maybe to remove the RTC in favor of the internal watchdog timer to make the board even more simple (thereby accepting some inaccuracy in the periodicity of frames)? 
 No I2C pinout or at least another version without?
@@ -69,7 +69,7 @@ If you don't use the moisture or ultrasound distance sensor (these seem to requi
 
 All files can be found in the [firmware](firmware) location. 
 
-### AVR Mega328PB
+### AVR Mega328PB fimrware
 
 So far, you need the [Arduino IDE](https://www.arduino.cc/en/Main/Software) to build the firmware.
 Moreover, the [LMIC library](https://github.com/matthijskooijman/arduino-lmic) is currently used to implement LoRaWAN.
@@ -98,7 +98,7 @@ For disablinge the clock divider, which you have to do, run:
 avrdude -patmega328pb -cusbtiny -v -Ulfuse:w:0xe2:m
 ```
 
-### STM32F051K8T6
+### STM32F051 firmware
 
 The version currently in development will be based on the *STM32F051K8T6* ARM Cortex M0 IC MCU operating at 48Mhz with 64KB FLASH and 8KB of embedded SRAM.
 
@@ -112,6 +112,12 @@ Next to the very basic digital input sensing and ADC meassurements on the availa
 At the moment, these are the ultrasound distance and the capacitive soil moisture sensor.
 
 ![Soil moisture and ultrasound distance sensor](https://www.digidev.de/gmote/img/sensors.jpg)
+
+These are sensors you probably know already and where to buy them.
+They were not designed by the GMote team.
+
+However, in order to reduce costs and to simplify things, yet another soil moisture sensor based on the infamous *74HC14* hex inverting Schmitt trigger has been designed.
+Here we go: [GMote Soil Moisture Sensor](pcb/sms).
 
 ## Utils and configuration
 
