@@ -67,14 +67,36 @@ If you don't use the moisture or ultrasound distance sensor (these seem to requi
 
 ## Firmware
 
+### AVR Mega328PB
+
 So far, you need the [Arduino IDE](https://www.arduino.cc/en/Main/Software) to build the firmware.
 Moreover, the [LMIC library](https://github.com/matthijskooijman/arduino-lmic) is currently used to implement LoRaWAN.
 Please follow the [instructions](https://github.com/matthijskooijman/arduino-lmic/#Installing) to include this library in your Arduino IDE.
 
+Now you can build the firmware from the Arduino Sketch. 
+[./firmware/m328pb.ino](./firmware/m328pb.ino)
+Comment or uncomment the line
+```c
+#define PCB_MINI
+```
+in the very beginning of the sketch as required.
+
+Alternatively, feel free to use one of the precompiled binaries.
+Mini: [./firmware/m328pb_mini.hex](firmware/m328pb_mini.hex) (recommended)
+Small: [./firmware/m328pb_small.hex](firmware/m328pb_small.hex) (recommended)
+
 Since you build a GMote device from scratch, you start with a plain Atmega328P without an installed Arduino bootloader.
 Use the ISP programmer and the [avrdude](https://www.nongnu.org/avrdude/) software to program either an optional Arduino bootloader or upload the GMote firmware directly.
+To upload the firmware directly using the Pocket AVR Programmer, do:
+```
+avrdude -patmega328pb -cusbtiny -v -Uflash:w:<b>/path/to/m328pb_mini.hex</b>:i
+```
+and for disablinge the clock divider
+```
+avrdude -patmega328pb -cusbtiny -v -Ulfuse:w:0xe2:m
+```
 
-Details can be found in the respective [firmware](firmware) location. 
+All files can be found in the [firmware](firmware) location. 
 
 ## Sensors
 
