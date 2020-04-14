@@ -1,0 +1,6 @@
+syscfg.vals:
+        # lora
+        LORA_NODE_REGION: 6
+        LORA_NODE_CLI: 0
+        LORA_NODE_LOG_CLI: 0
+

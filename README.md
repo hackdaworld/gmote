@@ -77,7 +77,7 @@ So far, you need the [Arduino IDE](https://www.arduino.cc/en/Main/Software) to b
 Moreover, the [LMIC library](https://github.com/matthijskooijman/arduino-lmic) is currently used to implement LoRaWAN.
 Please follow the [instructions](https://github.com/matthijskooijman/arduino-lmic/#Installing) to include this library in your Arduino IDE.
 
-Now you can build the firmware from the Arduino Sketch, [m328pb.ino](./firmware/m328pb.ino).\
+Now you can build the firmware from the Arduino Sketch, [m328pb.ino](./firmware/mega328pb/m328pb.ino).\
 Comment or uncomment the line
 ```c
 #define PCB_MINI
@@ -85,8 +85,8 @@ Comment or uncomment the line
 in the very beginning of the sketch depending on the board you chose.
 
 Alternatively, feel free to use one of the precompiled binaries.\
-Mini: [m328pb_mini.hex](firmware/m328pb_mini.hex)\
-Small: [m328pb_small.hex](firmware/m328pb_small.hex)
+Mini: [m328pb_mini.hex](firmware/mega328pb/m328pb_mini.hex)\
+Small: [m328pb_small.hex](firmware/mega328pb/m328pb_small.hex)
 
 Since you build a GMote device from scratch, you start with a plain Atmega328P without an installed Arduino bootloader.
 Use the ISP programmer and the [avrdude](https://www.nongnu.org/avrdude/) software to program either an optional Arduino bootloader or upload the GMote firmware directly.
@@ -106,7 +106,10 @@ The version currently in development will be based on the *STM32F051K8T6* ARM Co
 
 [Apache MyNewt](https://mynewt.apache.org/) as well as [Mbed OS](https://www.mbed.com/) are considered as an OS.
 
- We keep you posted ...
+* MyNewt: First attempts can be found in [firmware/mynewt](firmware/mynewt) 
+* Mbed OS: nothing yet ...
+
+We keep you posted ...
 
 ## Sensors
 

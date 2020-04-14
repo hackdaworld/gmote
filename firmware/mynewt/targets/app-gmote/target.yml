@@ -1,0 +1,3 @@
+target.app: apps/gmote
+target.bsp: hw/bsp/gmote
+target.build_profile: debug

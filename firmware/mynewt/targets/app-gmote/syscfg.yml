@@ -1,0 +1,7 @@
+syscfg.vals:
+    # SYS
+    CONSOLE_UART_DEV: '"uart0"'
+
+    # LoRaWAN
+    LORA_MAC_TIMER_NUM: "1"
+    TIMER_1: "1"

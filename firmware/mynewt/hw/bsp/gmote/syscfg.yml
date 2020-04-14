@@ -1,0 +1,55 @@
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+
+syscfg.defs:
+    STM32_FLASH_SIZE_KB:
+        description: 'Total flash size in KB.'
+        value: 64
+
+syscfg.vals:
+    # sys
+    REBOOT_LOG_FLASH_AREA: FLASH_AREA_REBOOT_LOG
+    CONFIG_FCB_FLASH_AREA: FLASH_AREA_NFFS
+    NFFS_FLASH_AREA: FLASH_AREA_NFFS
+    COREDUMP_FLASH_AREA: FLASH_AREA_IMAGE_1
+    MCU_SYSCLK_PLL_HSI: 0
+    OS_MAIN_STACK_SIZE: 128
+    MSYS_1_BLOCK_COUNT: 0
+
+    # uarts
+    UART_0_PIN_TX: 'MCU_GPIO_PORTA(9)'
+    UART_0_PIN_RX: 'MCU_GPIO_PORTA(10)'
+    UART_0_PIN_CTS: 'MCU_GPIO_PORTA(11)'
+    UART_0_PIN_RTS: 'MCU_GPIO_PORTA(12)'
+
+    # spi - sx1276 / rfm95
+    SPI_0_MASTER: 1
+    SPI_0_CUSTOM_CFG: 1
+    SPI_0_PIN_SS: 'MCU_GPIO_PORTA(4)'
+    SPI_0_PIN_SCK: 'MCU_GPIO_PORTA(5)'
+    SPI_0_PIN_MISO: 'MCU_GPIO_PORTA(6)'
+    SPI_0_PIN_MOSI: 'MCU_GPIO_PORTA(7)'
+    SX1276_SPI_IDX: 0
+    SX1276_SPI_CS_PIN: 'MCU_GPIO_PORTA(4)'
+    SX1276_HAS_ANT_SW: 0
+
+    # timers
+    TIMER_0_TIM: 'TIM15'
+    TIMER_1_TIM: 'TIM16'
+    TIMER_2_TIM: 'TIM17'
