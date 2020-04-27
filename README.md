@@ -57,6 +57,11 @@ A lot of PCB manufacturers directly support the KiCad PCB files.
 The size of the SMD parts was chosen to be 0805 (2012) and hand soldering pads were used for the resistors and capacitors so you can DIY at home with a low cost soldering iron.
 Caution: Patience required!
 
+:warning: :warning:
+The ATMega based boards are missing a pullup at the chipselect signal of the LoRa modem.
+Please find details and a workaround in the [firmware section](#firmware).
+:warning: :warning:
+
 ### Battery
 
 The popular JST connector is used to connect the battery.
@@ -99,6 +104,16 @@ For disablinge the clock divider, which you have to do, run:
 ```
 avrdude -patmega328pb -cusbtiny -v -Ulfuse:w:0xe2:m
 ```
+
+:warning: :warning:
+A pullup is required at the chipselect signal of the LoRa modem (pin 5 of the HopeRF or pin 14 of the ATMega).
+Without it, programming the firmware or setting the fuse bits only works randomly because of the SPI LoRa modem disturbing the ISP programming process.
+I am not sure why I didn't recognize this for the first few test devices.
+Either there a different versions of the modem where some of them have an integrated pullup or it was simply by chance. 
+I helped myself with a short wire applying VCC to the above mentioned pin during programming and setting the fuse bits.
+There will be no board revision just fixing this bug since a new board is planned anyways.
+Sorry for the inconvenience!
+:warning: :warning:
 
 ### STM32F051 firmware
 
