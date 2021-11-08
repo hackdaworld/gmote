@@ -51,7 +51,7 @@ Moreover, there is one based on the [ARM MCU](pcb/arm), which is in very early s
 You can find the available PCBs in the respective [PCB](pcb) directory
 together with further details as well as the bill of materials and respective [DigiKey](https://www.digikey.de/) part numbers.
 
-The boards are designed with [KiCad](http://kicad-pcb.org/).
+The boards are designed with [KiCad](http://kicad.org/).
 A lot of PCB manufacturers directly support the KiCad PCB files.
 
 The size of the SMD parts was chosen to be 0805 (2012) and hand soldering pads were used for the resistors and capacitors so you can DIY at home with a low cost soldering iron.
